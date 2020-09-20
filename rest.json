@@ -1,0 +1,182 @@
+[
+    {
+        "request": {
+            "allowRedirects": true,
+            "body": {
+                "company": {
+                    "code": 2020,
+                    "name": "KTBG"
+                },
+                "id": 11,
+                "name": "James",
+                "username": "Sorapong"
+            },
+            "cert": null,
+            "headers": {
+                "Accept": "application/json, */*",
+                "Content-Type": "application/json",
+                "User-Agent": "RESTinstance/1.0.2"
+            },
+            "method": "POST",
+            "netloc": "jsonplaceholder.typicode.com",
+            "path": "/users",
+            "proxies": {},
+            "query": {},
+            "scheme": "https",
+            "sslVerify": true,
+            "timeout": [
+                null,
+                null
+            ],
+            "timestamp": {
+                "local": "2020-09-10T11:37:33.008214+07:00",
+                "utc": "2020-09-10T04:37:33.008214+00:00"
+            },
+            "url": "https://jsonplaceholder.typicode.com/users"
+        },
+        "response": {
+            "body": {
+                "company": {
+                    "code": 2020,
+                    "name": "KTBG"
+                },
+                "id": 11,
+                "name": "James",
+                "username": "Sorapong"
+            },
+            "headers": {
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Expose-Headers": "Location",
+                "CF-Cache-Status": "DYNAMIC",
+                "CF-RAY": "5d06744ce88519ed-SIN",
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+                "Content-Length": "116",
+                "Content-Type": "application/json; charset=utf-8",
+                "Date": "Thu, 10 Sep 2020 04:37:32 GMT",
+                "Etag": "W/\"74-mvH1xwbbdOycYNVrBRfPU2guxj4\"",
+                "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                "Expires": "-1",
+                "Location": "http://jsonplaceholder.typicode.com/users/11",
+                "Pragma": "no-cache",
+                "Server": "cloudflare",
+                "Set-Cookie": "__cfduid=dba32754187da3b0a50ee4c5b7151162d1599712652; expires=Sat, 10-Oct-20 04:37:32 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+                "Vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
+                "Via": "1.1 vegur",
+                "X-Content-Type-Options": "nosniff",
+                "X-Powered-By": "Express",
+                "X-Ratelimit-Limit": "1000",
+                "X-Ratelimit-Remaining": "999",
+                "X-Ratelimit-Reset": "1599712710",
+                "cf-request-id": "0517e70412000019ed87092200000001"
+            },
+            "seconds": 0.6913630000000001,
+            "status": 201
+        },
+        "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "default": true,
+            "description": "Jsonpost Api: POST json body and write to file",
+            "examples": [],
+            "properties": {
+                "request": {
+                    "properties": {
+                        "body": {
+                            "properties": {
+                                "company": {
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "code",
+                                        "name"
+                                    ],
+                                    "type": "object"
+                                },
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "username": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "company",
+                                "id",
+                                "name",
+                                "username"
+                            ],
+                            "type": "object"
+                        },
+                        "query": {
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "response": {
+                    "properties": {
+                        "body": {
+                            "properties": {
+                                "company": {
+                                    "properties": {
+                                        "code": {
+                                            "default": 2020,
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "default": "KTBG",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "code",
+                                        "name"
+                                    ],
+                                    "type": "object"
+                                },
+                                "id": {
+                                    "default": 11,
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "default": "James",
+                                    "type": "string"
+                                },
+                                "username": {
+                                    "default": "Sorapong",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "company",
+                                "id",
+                                "name",
+                                "username"
+                            ],
+                            "type": "object"
+                        },
+                        "status": {
+                            "enum": [
+                                201
+                            ],
+                            "type": "integer"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "title": "POST https://jsonplaceholder.typicode.com/users",
+            "type": "object"
+        },
+        "spec": {}
+    }
+]

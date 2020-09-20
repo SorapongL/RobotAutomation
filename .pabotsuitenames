@@ -1,0 +1,5 @@
+datasources:7b334c113fb4265d88c83860748d2910c001b750
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:7e54f4d4e40b00ee78cd348a2dc9f5be33c5f9f8
+--suite MouseOperations
