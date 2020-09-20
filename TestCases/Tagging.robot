@@ -2,8 +2,8 @@
 
 
 ***Test Cases***
-#-i เลือกรันที่มีแท็กนั้นๆ
-#-e เลือกรันที่ไม่เอาแท็กนั้นๆ
+#-i เลือกรันที่มีแท็กนั้น
+#-e เลือกรันที่ไม่เอาแท็กนั้น
 TC1 User RegistrationTest
     [Tags]    regression
     Log to console      This is user registration test
