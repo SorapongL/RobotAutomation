@@ -19,5 +19,5 @@ ${Browser}    chrome
     #handle alert  accept    #กดปุ่ม ok 
     #handle alert  dismiss   #กดปุ่ม cancel 
     #handle alert  Leave
-    #alert should be present   Press a button!   #เปิดแล้วปิดเอง กด ok เอง
-    alert should not be present   Press a button!   #เปิดแล้วปิดเอง กด cancel จะขึ้น Error ถูกแล้ว
+    alert should be present   Press a button!   #เปิดแล้วปิดเอง กด ok เอง
+    #alert should not be present   Press a button!   #เปิดแล้วปิดเอง กด cancel จะขึ้น Error ถูกแล้ว

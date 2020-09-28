@@ -35,10 +35,10 @@ ${link Ericsson LTE eUTRAN Performance Report HTML}    /ibmcognos/cgi-bin/cognos
 7. คลิ๊กไปที่ GEO
     click element                    xpath://input[@value="[ECELL (DMR)].[ERI EUTRAN GEO Dimension].[ERI eUTRAN GEO]"]
     sleep              3   
-8. คลิ๊กไปที่ Network 900
-    click element    xpath://input[@value="900"]
-    Click Button     xpath://button[@class='bp']
-    sleep            3
+# 8. คลิ๊กไปที่ Network 900
+#     click element    xpath://input[@value="900"]
+#     Click Button     xpath://button[@class='bp']
+#     sleep            3
 9. คลิ๊กไปที่ SHOW Graph
     click element    xpath://input[@value="SHOW"]
     sleep            2
@@ -55,28 +55,30 @@ ${link Ericsson LTE eUTRAN Performance Report HTML}    /ibmcognos/cgi-bin/cognos
     click element                    xpath://option[@value="CHIANG MAI"]
     Click Button                     xpath://button[@class='bp']
     sleep            3
-14. คลิ๊กไปที่ DISTRICT=CHIANG MAI-MUEANG CHIANG MAI
-    click element                    xpath://option[@value="CHIANG MAI-MUEANG CHIANG MAI"]
-    Click Button                     xpath://button[@class='bp']
-    sleep            3
-15. คลิ๊กไปที่ SUB DISTRICT=CHIANG MAI-MUEANG CHIANG MAI-SUTHEP
-    click element    xpath://option[@value="CHIANG MAI-MUEANG CHIANG MAI-SUTHEP"]
-    Click Button     xpath://button[@class='bp']
-    sleep            3
-16. คลิ๊กไปที่ SITE NAME=CMI1742P
-    click element    xpath://option[@value="CMI1742P"]
-    Click Button     xpath://button[@class='bp']
-    sleep            4
+# 14. คลิ๊กไปที่ DISTRICT=CHIANG MAI-MUEANG CHIANG MAI
+#     click element                    xpath://option[@value="CHIANG MAI-MUEANG CHIANG MAI"]
+#     Click Button                     xpath://button[@class='bp']
+#     sleep            3
+# 15. คลิ๊กไปที่ SUB DISTRICT=CHIANG MAI-MUEANG CHIANG MAI-SUTHEP
+#     click element    xpath://option[@value="CHIANG MAI-MUEANG CHIANG MAI-SUTHEP"]
+#     Click Button     xpath://button[@class='bp']
+#     sleep            4
+# 16. คลิ๊กไปที่ SITE NAME=CMI1742P
+#     click element    xpath://option[@value="CMI1742P"]
+#     Click Button     xpath://button[@class='bp']
+#     sleep            4
     #execute javascript        window.scrollTo(0,document.body.scrollHeight)
 17. เลือก Datetime
     #คลิกแก้ไขวันที่แต่ต้องพิมพ์เอง
     #click element                       xpath://input[@class="clsSelectDateEditBox"]
     #29/09/2019 ของ Day   06/10/2019 ของ Week
+    #07/09/2020 ของ Day ใช้อันนี้
     execute javascript        window.scrollTo(0,4500)
     click element    xpath://img[@src="/ibmcognos/skins/../prompting/reportskin/prompting/images/icon_datepicker.gif"]
-    click element    xpath://img[@class="clsBtnYearDown"]
-    click element    xpath=/html/body/div[3]/table/tbody/tr/td/table[2]/tbody/tr[2]/td[3]
-    click element    xpath=/html/body/div[3]/table/tbody/tr/td/table[3]/tbody/tr[6]/td[1]
+    click element    xpath=/html/body/div[3]/table/tbody/tr/td/table[3]/tbody/tr[3]/td[2]    
+    # click element    xpath://img[@class="clsBtnYearDown"]
+    # click element    xpath=/html/body/div[3]/table/tbody/tr/td/table[2]/tbody/tr[2]/td[3]
+    # click element    xpath=/html/body/div[3]/table/tbody/tr/td/table[3]/tbody/tr[6]/td[1]
     sleep         3
 18. เลือก BH Type = Daily BH
     click element    xpath://input[@value="DBH"]
@@ -89,8 +91,8 @@ ${link Ericsson LTE eUTRAN Performance Report HTML}    /ibmcognos/cgi-bin/cognos
     sleep          3
 21. คลิก Link Precal
     Click element         xpath=/html/body/form[1]/table/tbody/tr[3]/td/div/div[1]/table/tbody/tr[3]/td/table/tbody/tr[2]/td[2]/table/tbody/tr[4]/td/div/div/span/span
-    sleep           160
-    log to console            ครบ 160
+    sleep           30
+    log to console            ครบ 30
 22. Download Document Excel
     Select window              title=Ericsson LTE eUTRAN Performance, Cell Report (Frist Piority) GEO-DBH - IBM Cognos Viewer
     log to console             เลือก Tab window
@@ -98,3 +100,4 @@ ${link Ericsson LTE eUTRAN Performance Report HTML}    /ibmcognos/cgi-bin/cognos
     Click element              xpath://table[@id="_NS_viewInExcel"]
     Click element              xpath://img[@src="/ibmcognos/rv/images/action_view_excel_2007.gif"]
     log to console             คลิก ปุ่มโหลดเอกสาร Excel แล้ว
+    Close All Browsers

@@ -2,7 +2,8 @@
 Library    Selenium2Library
 
 *** Variables ***
-${url}        http://www.newtours.demoaut.com/
+#${url}        http://www.newtours.demoaut.com/
+${url}        http://www.practiceselenium.com/practice-form.html
 ${Browser}    chrome
 
 *** Keywords ***

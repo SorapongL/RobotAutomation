@@ -21,6 +21,8 @@ ${js_string}=    {
 Test Json data
     ${data}=           Evaluate           json.loads($js_string)    json
     #แปลงข้อมูล json เป็น dictionary ด้วย json.loads
+    #Log To Console       \n${data["random"]}\n
+    #แสดงข้อมูลว่ามีอะไรบ้างใน random
     Log To Console       \n${data["random"]["processVariables"]}\n
     #แสดงข้อมูลว่ามีอะไรบ้างใน processVariables
     Set To Dictionary    ${data["random"]["processVariables"]}        Years=2020                processKey=Test2020

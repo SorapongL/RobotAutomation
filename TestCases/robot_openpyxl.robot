@@ -19,13 +19,16 @@ Test Load Data Excel
     ${body}           Fetch From Right    ${cell}      {}
     #เอาข้อมูลตัวแปร cell เก็บในตัวแปร body
     Log To Console    \n\n${body}\n
+
 #EP8 เขียนข้อมูลลงใน excel
 Test Write Excel
     ${wb}             Load Workbook              ${CURDIR}/${excel}
+    #${wb}             Load Workbook               C:/Users/james/RobotAutomation/TestCases/${excel}
     Log To Console    ${wb}
     ${ws}             Set Variable               ${wb['Sheet1']}
     Log To Console    ${ws}
     Evaluate          $ws.cell(2,4,'${Data}')
     Evaluate          $wb.save('${excel}')
+  
 
 

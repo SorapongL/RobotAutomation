@@ -8,7 +8,7 @@ ${json}         {"id": 11,"name": "James","username":"Sorapong", "company":{"nam
 POST json body and write to file
     POST        https://jsonplaceholder.typicode.com/users    ${json}
     Integer     response status           201
-    #เช็คสถานะให้รีเทินกลับเป็นค่า 201
+    #เช็คสถานะให้รีเทินกลับเป็นค่า 201 สร้างทรัพยากรใหม่แล้ว
     Output      response body 
     #แสดง response body ที่เราส่งค่าไป
     Output      response body     ${OUTPUTDIR}/response.json

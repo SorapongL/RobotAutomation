@@ -29,8 +29,8 @@
                 null
             ],
             "timestamp": {
-                "local": "2020-09-10T11:37:33.008214+07:00",
-                "utc": "2020-09-10T04:37:33.008214+00:00"
+                "local": "2020-09-28T10:03:37.610063+07:00",
+                "utc": "2020-09-28T03:03:37.610063+00:00"
             },
             "url": "https://jsonplaceholder.typicode.com/users"
         },
@@ -48,29 +48,31 @@
                 "Access-Control-Allow-Credentials": "true",
                 "Access-Control-Expose-Headers": "Location",
                 "CF-Cache-Status": "DYNAMIC",
-                "CF-RAY": "5d06744ce88519ed-SIN",
+                "CF-RAY": "5d9a3b737efb62ff-BKK",
                 "Cache-Control": "no-cache",
                 "Connection": "keep-alive",
                 "Content-Length": "116",
                 "Content-Type": "application/json; charset=utf-8",
-                "Date": "Thu, 10 Sep 2020 04:37:32 GMT",
+                "Date": "Mon, 28 Sep 2020 03:03:36 GMT",
                 "Etag": "W/\"74-mvH1xwbbdOycYNVrBRfPU2guxj4\"",
                 "Expect-CT": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
                 "Expires": "-1",
                 "Location": "http://jsonplaceholder.typicode.com/users/11",
+                "NEL": "{\"report_to\":\"cf-nel\",\"max_age\":604800}",
                 "Pragma": "no-cache",
+                "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report?lkg-colo=104&lkg-time=1601262217\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
                 "Server": "cloudflare",
-                "Set-Cookie": "__cfduid=dba32754187da3b0a50ee4c5b7151162d1599712652; expires=Sat, 10-Oct-20 04:37:32 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
+                "Set-Cookie": "__cfduid=d13cb8b0e8f8c62c0803192e7bf5d0f8e1601262216; expires=Wed, 28-Oct-20 03:03:36 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax",
                 "Vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
                 "Via": "1.1 vegur",
                 "X-Content-Type-Options": "nosniff",
                 "X-Powered-By": "Express",
                 "X-Ratelimit-Limit": "1000",
                 "X-Ratelimit-Remaining": "999",
-                "X-Ratelimit-Reset": "1599712710",
-                "cf-request-id": "0517e70412000019ed87092200000001"
+                "X-Ratelimit-Reset": "1601262247",
+                "cf-request-id": "0574437c29000062ff9d815200000001"
             },
-            "seconds": 0.6913630000000001,
+            "seconds": 0.761432,
             "status": 201
         },
         "schema": {

@@ -2,8 +2,9 @@
 Library    Selenium2Library
 
 *** Variables ***
-${url}        http://www.newtours.demoaut.com/
-${Browser}    chrome
+#${url}        http://www.newtours.demoaut.com/
+${url}         https://opensource-demo.orangehrmlive.com/
+${Browser}     chrome
 
 *** Test Cases ***
 2.กรอก user and password
@@ -16,8 +17,8 @@ ${Browser}    chrome
     log to console    ${pagetitle}
     log    ${pagetitle}
 
-    input text         userName    mercury
-    input text         password    mercury
+    input text         txtUsername    Admin
+    input text         txtPassword    admin123
 
     Close All Browsers
 *** Keywords ***

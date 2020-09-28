@@ -21,9 +21,10 @@ Capture PNG
     Open Browser  https://robotframework.org/  chrome
     Maximize Browser Window
     Set Selenium Speed   0.2
-    #รูปแคปเจอออกรูปเดียว 2 บรรทัดล่าง
+    #เก็บรูป 2 พาร์ท
     Capture Page Screenshot    ${CURDIR}/Capture-${date_time}.png
+    Log To Console             ${CURDIR}
     #เก็บรูปในพาร์ทปัจจุบัน
     Capture Page Screenshot    %{userprofile}/Capture-${date_time}.png
-    #ใช้ได้รูปอยู่ในโฟล์เด้อ james
+    #เก็บรูปในโฟล์เด้อ james
     Log To Console  Capture-${date_time}
