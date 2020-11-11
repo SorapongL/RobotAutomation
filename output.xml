@@ -1,423 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200928 11:05:32.626" rpa="false">
-<suite id="s1" name="Ericsson" source="C:\Users\james\RobotAutomation\TestCases\Ericsson.robot">
-<test id="s1-t1" name="1. เปิดเว็บไซต์ ibm-cognos">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20201111 16:12:40.960" rpa="false">
+<suite id="s1" name="Greplogxmlericsson" source="C:\Users\james\RobotAutomation\TestCases\greplogxmlericsson.robot">
+<test id="s1-t1" name="Create File Grep Log">
+<kw name="Create File" library="OperatingSystem">
+<doc>Creates a file with the given content and encoding.</doc>
 <arguments>
-<arg>${url}</arg>
-<arg>${Browser}</arg>
+<arg>C:\\Users\\james\\RobotAutomation\\TestCases/testxmlericsson.txt</arg>
 </arguments>
-<msg timestamp="20200928 11:05:32.981" level="INFO">Opening browser 'chrome' to base url 'http://10.4.109.199/ibmcognos/cgi-bin/cognosisapi.dll?b_action=xts.run&amp;m=portal/main.xts&amp;startwel=yes'.</msg>
-<status status="PASS" starttime="20200928 11:05:32.981" endtime="20200928 11:05:37.227"></status>
+<msg timestamp="20201111 16:12:41.336" level="INFO" html="yes">Created file '&lt;a href="file://C:\Users\james\RobotAutomation\TestCases\testxmlericsson.txt"&gt;C:\Users\james\RobotAutomation\TestCases\testxmlericsson.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20201111 16:12:41.335" endtime="20201111 16:12:41.337"></status>
 </kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200928 11:05:37.228" endtime="20200928 11:05:39.447"></status>
-</kw>
-<kw name="Set Selenium Speed" library="Selenium2Library">
-<doc>Sets the delay that is waited after each Selenium command.</doc>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
 <arguments>
-<arg>0.3</arg>
+<arg>C:/Users/james/downloadfromFileZilla/bfkt/HOST02_pmresult_13653022_30_202009150930_202009151000.xml</arg>
+<arg>VNFP</arg>
 </arguments>
-<status status="PASS" starttime="20200928 11:05:39.450" endtime="20200928 11:05:39.450"></status>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20201111 16:12:41.337" level="INFO" html="yes">Reading file '&lt;a href="file://C:\Users\james\downloadfromFileZilla\bfkt\HOST02_pmresult_13653022_30_202009150930_202009151000.xml"&gt;C:\Users\james\downloadfromFileZilla\bfkt\HOST02_pmresult_13653022_30_202009150930_202009151000.xml&lt;/a&gt;'.</msg>
+<msg timestamp="20201111 16:12:41.341" level="INFO">190 out of 1404 lines matched</msg>
+<msg timestamp="20201111 16:12:41.341" level="INFO">${response} = &lt;moid&gt;CAT-MTG08HWVPGWU01/VM:nodeName=VNFP, VM Name=IPU_B_0081&lt;/moid&gt;
+&lt;moid&gt;CAT-MTG08HWVPGWU01/VM:nodeName=VNFP, VM Name=IPU_B_0080&lt;/moid&gt;
+&lt;moid&gt;CAT-MTG08HWVPGWU01/VM:nodeName=VNFP, VM Name=SPU_I_0079&lt;...</msg>
+<status status="PASS" starttime="20201111 16:12:41.337" endtime="20201111 16:12:41.341"></status>
 </kw>
-<status status="PASS" starttime="20200928 11:05:32.979" endtime="20200928 11:05:39.450" critical="yes"></status>
+<kw name="Append To File" library="OperatingSystem">
+<doc>Appends the given content to the specified file.</doc>
+<arguments>
+<arg>C:\\Users\\james\\RobotAutomation\\TestCases/testxmlericsson.txt</arg>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20201111 16:12:41.353" level="INFO" html="yes">Appended to file '&lt;a href="file://C:\Users\james\RobotAutomation\TestCases\testxmlericsson.txt"&gt;C:\Users\james\RobotAutomation\TestCases\testxmlericsson.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20201111 16:12:41.350" endtime="20201111 16:12:41.353"></status>
+</kw>
+<status status="PASS" starttime="20201111 16:12:41.334" endtime="20201111 16:12:41.353" critical="yes"></status>
 </test>
-<test id="s1-t2" name="2. กรอก user and password">
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>name=CAMUsername</arg>
-<arg>tester1</arg>
-</arguments>
-<msg timestamp="20200928 11:05:39.463" level="INFO">Typing text 'tester1' into text field 'name=CAMUsername'.</msg>
-<status status="PASS" starttime="20200928 11:05:39.463" endtime="20200928 11:05:40.619"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>name=CAMPassword</arg>
-<arg>Tester1</arg>
-</arguments>
-<msg timestamp="20200928 11:05:40.623" level="INFO">Typing text 'Tester1' into text field 'name=CAMPassword'.</msg>
-<status status="PASS" starttime="20200928 11:05:40.622" endtime="20200928 11:05:41.731"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:05:39.461" endtime="20200928 11:05:41.733" critical="yes"></status>
-</test>
-<test id="s1-t3" name="3. กดค้นหา">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>id=cmdOK</arg>
-</arguments>
-<msg timestamp="20200928 11:05:41.742" level="INFO">Clicking button 'id=cmdOK'.</msg>
-<status status="PASS" starttime="20200928 11:05:41.742" endtime="20200928 11:05:44.478"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:05:41.740" endtime="20200928 11:05:44.478" critical="yes"></status>
-</test>
-<test id="s1-t4" name="4. คลิ๊กไปที่ 4G-Access Reports">
-<kw name="Click Link" library="Selenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//a[@href="${link 4G-Access Reports}"]</arg>
-</arguments>
-<msg timestamp="20200928 11:05:44.493" level="INFO">Clicking link 'xpath=//a[@href="/ibmcognos/cgi-bin/cognosisapi.dll?b_action=xts.run&amp;m=portal/cc.xts&amp;m_folder=iB3FAF1D930EA42D28936561E6062F0B5"]'.</msg>
-<status status="PASS" starttime="20200928 11:05:44.493" endtime="20200928 11:05:46.079"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:05:44.484" endtime="20200928 11:05:46.080" critical="yes"></status>
-</test>
-<test id="s1-t5" name="5. คลิ๊กไปที่ Ericsson LTE eUTRAN Performance Report">
-<kw name="Click Link" library="Selenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//a[@href="${link Ericsson LTE eUTRAN Performance Report}"]</arg>
-</arguments>
-<msg timestamp="20200928 11:05:46.084" level="INFO">Clicking link 'xpath=//a[@href="/ibmcognos/cgi-bin/cognosisapi.dll?b_action=xts.run&amp;m=portal/cc.xts&amp;m_folder=i44794DDB0BBD43CF86F146E747C39668"]'.</msg>
-<status status="PASS" starttime="20200928 11:05:46.084" endtime="20200928 11:05:47.525"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:05:46.081" endtime="20200928 11:05:47.525" critical="yes"></status>
-</test>
-<test id="s1-t6" name="6. คลิ๊กไปที่ Ericsson LTE eUTRAN Performance Report HTML">
-<kw name="Click Link" library="Selenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=//a[@href="${link Ericsson LTE eUTRAN Performance Report HTML}"]</arg>
-</arguments>
-<msg timestamp="20200928 11:05:47.529" level="INFO">Clicking link 'xpath=//a[@href="/ibmcognos/cgi-bin/cognosisapi.dll?b_action=cognosViewer&amp;ui.action=run&amp;ui.object=%2fcontent%2ffolder%5b%40name%3d%274G-Access%20Reports%27%5d%2ffolder%5b%40name%3d%27Ericsson%20LTE%20eUTRAN%20Performance%20Report%27%5d%2freport%5b%40name%3d%27Ericsson%20LTE%20eUTRAN%20Performance%20Report%27%5d&amp;ui.name=Ericsson%20LTE%20eUTRAN%20Performance%20Report&amp;run.outputFormat=&amp;run.prompt=true&amp;ui.backURL=%2fibmcognos%2fcgi-bin%2fcognosisapi.dll%3fb_action%3dxts.run%26m%3dportal%2fcc.xts%26m_folder%3di44794DDB0BBD43CF86F146E747C39668"]'.</msg>
-<status status="PASS" starttime="20200928 11:05:47.529" endtime="20200928 11:05:51.616"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<arguments>
-<arg>//div[@class="dijitInline dijitRadio"]</arg>
-</arguments>
-<status status="PASS" starttime="20200928 11:05:51.617" endtime="20200928 11:05:51.941"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:05:47.527" endtime="20200928 11:05:51.942" critical="yes"></status>
-</test>
-<test id="s1-t7" name="7. คลิ๊กไปที่ GEO">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@value="[ECELL (DMR)].[ERI EUTRAN GEO Dimension].[ERI eUTRAN GEO]"]</arg>
-</arguments>
-<msg timestamp="20200928 11:05:51.949" level="INFO">Clicking element 'xpath://input[@value="[ECELL (DMR)].[ERI EUTRAN GEO Dimension].[ERI eUTRAN GEO]"]'.</msg>
-<status status="PASS" starttime="20200928 11:05:51.949" endtime="20200928 11:05:52.732"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200928 11:05:55.740" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200928 11:05:52.733" endtime="20200928 11:05:55.740"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:05:51.947" endtime="20200928 11:05:55.742" critical="yes"></status>
-</test>
-<test id="s1-t8" name="9. คลิ๊กไปที่ SHOW Graph">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@value="SHOW"]</arg>
-</arguments>
-<msg timestamp="20200928 11:05:55.754" level="INFO">Clicking element 'xpath://input[@value="SHOW"]'.</msg>
-<status status="PASS" starttime="20200928 11:05:55.752" endtime="20200928 11:05:56.491"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20200928 11:05:58.503" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200928 11:05:56.494" endtime="20200928 11:05:58.503"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:05:55.749" endtime="20200928 11:05:58.504" critical="yes"></status>
-</test>
-<test id="s1-t9" name="10. คลิ๊กไปที่ Select all">
-<kw name="Click Link" library="Selenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>Select all</arg>
-</arguments>
-<msg timestamp="20200928 11:05:58.515" level="INFO">Clicking link 'Select all'.</msg>
-<status status="PASS" starttime="20200928 11:05:58.515" endtime="20200928 11:05:59.641"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:05:58.513" endtime="20200928 11:05:59.643" critical="yes"></status>
-</test>
-<test id="s1-t10" name="11. คลิ๊กไปที่ Report By PROVINCE">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@value="[ECELL (DMR)].[ERI EUTRAN GEO Dimension].[ERI eUTRAN GEO].[PROVINCE]"]</arg>
-</arguments>
-<msg timestamp="20200928 11:05:59.666" level="INFO">Clicking element 'xpath://input[@value="[ECELL (DMR)].[ERI EUTRAN GEO Dimension].[ERI eUTRAN GEO].[PROVINCE]"]'.</msg>
-<status status="PASS" starttime="20200928 11:05:59.665" endtime="20200928 11:06:00.425"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200928 11:06:03.440" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200928 11:06:00.426" endtime="20200928 11:06:03.440"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:05:59.663" endtime="20200928 11:06:03.442" critical="yes"></status>
-</test>
-<test id="s1-t11" name="12. คลิ๊กไปที่ NOR">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://option[@value="NOR"]</arg>
-</arguments>
-<msg timestamp="20200928 11:06:03.476" level="INFO">Clicking element 'xpath://option[@value="NOR"]'.</msg>
-<status status="PASS" starttime="20200928 11:06:03.476" endtime="20200928 11:06:04.182"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://button[@class='bp']</arg>
-</arguments>
-<msg timestamp="20200928 11:06:04.183" level="INFO">Clicking button 'xpath://button[@class='bp']'.</msg>
-<status status="PASS" starttime="20200928 11:06:04.183" endtime="20200928 11:06:10.359"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200928 11:06:13.370" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200928 11:06:10.360" endtime="20200928 11:06:13.370"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:06:03.459" endtime="20200928 11:06:13.370" critical="yes"></status>
-</test>
-<test id="s1-t12" name="13. คลิ๊กไปที่ปุ่ม CHIANG MAI">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://option[@value="CHIANG MAI"]</arg>
-</arguments>
-<msg timestamp="20200928 11:06:13.399" level="INFO">Clicking element 'xpath://option[@value="CHIANG MAI"]'.</msg>
-<status status="PASS" starttime="20200928 11:06:13.398" endtime="20200928 11:06:14.087"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://button[@class='bp']</arg>
-</arguments>
-<msg timestamp="20200928 11:06:14.089" level="INFO">Clicking button 'xpath://button[@class='bp']'.</msg>
-<status status="PASS" starttime="20200928 11:06:14.089" endtime="20200928 11:06:20.233"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200928 11:06:23.249" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200928 11:06:20.233" endtime="20200928 11:06:23.249"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:06:13.394" endtime="20200928 11:06:23.253" critical="yes"></status>
-</test>
-<test id="s1-t13" name="17. เลือก Datetime">
-<kw name="Execute Javascript" library="Selenium2Library">
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<arguments>
-<arg>window.scrollTo(0,4500)</arg>
-</arguments>
-<msg timestamp="20200928 11:06:23.274" level="INFO">Executing JavaScript:
-window.scrollTo(0,4500)
-Without any arguments.</msg>
-<status status="PASS" starttime="20200928 11:06:23.273" endtime="20200928 11:06:23.595"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://img[@src="/ibmcognos/skins/../prompting/reportskin/prompting/images/icon_datepicker.gif"]</arg>
-</arguments>
-<msg timestamp="20200928 11:06:23.596" level="INFO">Clicking element 'xpath://img[@src="/ibmcognos/skins/../prompting/reportskin/prompting/images/icon_datepicker.gif"]'.</msg>
-<status status="PASS" starttime="20200928 11:06:23.596" endtime="20200928 11:06:24.382"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=/html/body/div[3]/table/tbody/tr/td/table[3]/tbody/tr[3]/td[2]</arg>
-</arguments>
-<msg timestamp="20200928 11:06:24.386" level="INFO">Clicking element 'xpath=/html/body/div[3]/table/tbody/tr/td/table[3]/tbody/tr[3]/td[2]'.</msg>
-<status status="PASS" starttime="20200928 11:06:24.385" endtime="20200928 11:06:25.119"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200928 11:06:28.126" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200928 11:06:25.122" endtime="20200928 11:06:28.126"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:06:23.270" endtime="20200928 11:06:28.130" critical="yes"></status>
-</test>
-<test id="s1-t14" name="18. เลือก BH Type = Daily BH">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@value="DBH"]</arg>
-</arguments>
-<msg timestamp="20200928 11:06:28.173" level="INFO">Clicking element 'xpath://input[@value="DBH"]'.</msg>
-<status status="PASS" starttime="20200928 11:06:28.172" endtime="20200928 11:06:28.949"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200928 11:06:31.966" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200928 11:06:28.950" endtime="20200928 11:06:31.966"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:06:28.147" endtime="20200928 11:06:31.969" critical="yes"></status>
-</test>
-<test id="s1-t15" name="19. เลือก BH Level = Region">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://input[@value="[ECELL (DMR)].[ERI GROUP DBH Dimension].[ERI GEO REGION].[BH].[TSTAMP]"]</arg>
-</arguments>
-<msg timestamp="20200928 11:06:31.991" level="INFO">Clicking element 'xpath://input[@value="[ECELL (DMR)].[ERI GROUP DBH Dimension].[ERI GEO REGION].[BH].[TSTAMP]"]'.</msg>
-<status status="PASS" starttime="20200928 11:06:31.990" endtime="20200928 11:06:32.768"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200928 11:06:35.775" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200928 11:06:32.773" endtime="20200928 11:06:35.775"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:06:31.985" endtime="20200928 11:06:35.777" critical="yes"></status>
-</test>
-<test id="s1-t16" name="20. คลิก ปุ่ม Process all prompt values">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://button[@class='bp']</arg>
-</arguments>
-<msg timestamp="20200928 11:06:35.792" level="INFO">Clicking button 'xpath://button[@class='bp']'.</msg>
-<status status="PASS" starttime="20200928 11:06:35.792" endtime="20200928 11:06:39.481"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20200928 11:06:42.500" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20200928 11:06:39.485" endtime="20200928 11:06:42.500"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:06:35.787" endtime="20200928 11:06:42.505" critical="yes"></status>
-</test>
-<test id="s1-t17" name="21. คลิก Link Precal">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath=/html/body/form[1]/table/tbody/tr[3]/td/div/div[1]/table/tbody/tr[3]/td/table/tbody/tr[2]/td[2]/table/tbody/tr[4]/td/div/div/span/span</arg>
-</arguments>
-<msg timestamp="20200928 11:06:42.529" level="INFO">Clicking element 'xpath=/html/body/form[1]/table/tbody/tr[3]/td/div/div[1]/table/tbody/tr[3]/td/table/tbody/tr[2]/td[2]/table/tbody/tr[4]/td/div/div/span/span'.</msg>
-<status status="PASS" starttime="20200928 11:06:42.528" endtime="20200928 11:06:43.377"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>30</arg>
-</arguments>
-<msg timestamp="20200928 11:07:13.383" level="INFO">Slept 30 seconds</msg>
-<status status="PASS" starttime="20200928 11:06:43.378" endtime="20200928 11:07:13.383"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>ครบ 30</arg>
-</arguments>
-<status status="PASS" starttime="20200928 11:07:13.387" endtime="20200928 11:07:13.402"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:06:42.524" endtime="20200928 11:07:13.404" critical="yes"></status>
-</test>
-<test id="s1-t18" name="22. Download Document Excel">
-<kw name="Select Window" library="Selenium2Library">
-<doc>DEPRECATED in Selenium2Library 4.0. , use `Switch Window` instead.</doc>
-<arguments>
-<arg>title=Ericsson LTE eUTRAN Performance, Cell Report (Frist Piority) GEO-DBH - IBM Cognos Viewer</arg>
-</arguments>
-<status status="PASS" starttime="20200928 11:07:13.412" endtime="20200928 11:07:19.722"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>เลือก Tab window</arg>
-</arguments>
-<status status="PASS" starttime="20200928 11:07:19.723" endtime="20200928 11:07:19.724"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://table[@id="_NS_runIn"]</arg>
-</arguments>
-<msg timestamp="20200928 11:07:19.725" level="INFO">Clicking element 'xpath://table[@id="_NS_runIn"]'.</msg>
-<status status="PASS" starttime="20200928 11:07:19.725" endtime="20200928 11:07:20.474"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://table[@id="_NS_viewInExcel"]</arg>
-</arguments>
-<msg timestamp="20200928 11:07:20.480" level="INFO">Clicking element 'xpath://table[@id="_NS_viewInExcel"]'.</msg>
-<status status="PASS" starttime="20200928 11:07:20.477" endtime="20200928 11:07:21.236"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>xpath://img[@src="/ibmcognos/rv/images/action_view_excel_2007.gif"]</arg>
-</arguments>
-<msg timestamp="20200928 11:07:21.238" level="INFO">Clicking element 'xpath://img[@src="/ibmcognos/rv/images/action_view_excel_2007.gif"]'.</msg>
-<status status="PASS" starttime="20200928 11:07:21.238" endtime="20200928 11:07:22.097"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>คลิก ปุ่มโหลดเอกสาร Excel แล้ว</arg>
-</arguments>
-<status status="PASS" starttime="20200928 11:07:22.099" endtime="20200928 11:07:22.100"></status>
-</kw>
-<kw name="Close All Browsers" library="Selenium2Library">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200928 11:07:22.100" endtime="20200928 11:07:24.822"></status>
-</kw>
-<status status="PASS" starttime="20200928 11:07:13.410" endtime="20200928 11:07:24.823" critical="yes"></status>
-</test>
-<status status="PASS" starttime="20200928 11:05:32.628" endtime="20200928 11:07:24.832"></status>
+<status status="PASS" starttime="20201111 16:12:40.964" endtime="20201111 16:12:41.356"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="18" fail="0">Critical Tests</stat>
-<stat pass="18" fail="0">All Tests</stat>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="18" fail="0" id="s1" name="Ericsson">Ericsson</stat>
+<stat pass="1" fail="0" id="s1" name="Greplogxmlericsson">Greplogxmlericsson</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20200928 11:05:32.958" level="ERROR">Error in file 'C:\Users\james\RobotAutomation\TestCases\Ericsson.robot': Importing test library 'Datetime' failed: ModuleNotFoundError: No module named 'Datetime'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\james\AppData\Local\Programs\Python\Python38-32\Scripts\robot.exe
-  c:\users\james\appdata\local\programs\python\python38-32\python38.zip
-  c:\users\james\appdata\local\programs\python\python38-32\DLLs
-  c:\users\james\appdata\local\programs\python\python38-32\lib
-  c:\users\james\appdata\local\programs\python\python38-32
-  c:\users\james\appdata\local\programs\python\python38-32\lib\site-packages
-  c:\users\james\appdata\local\programs\python\python38-32\lib\site-packages\setuptools-44.0.0-py3.8.egg
-  c:\users\james\appdata\local\programs\python\python38-32\lib\site-packages\pip-19.3.1-py3.8.egg
-  c:\users\james\appdata\local\programs\python\python38-32\lib\site-packages\win32
-  c:\users\james\appdata\local\programs\python\python38-32\lib\site-packages\win32\lib
-  c:\users\james\appdata\local\programs\python\python38-32\lib\site-packages\Pythonwin</msg>
 </errors>
 </robot>
